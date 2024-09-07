@@ -31,10 +31,10 @@ export default function Component() {
   }
 
   const socialLinks = [
-    { name: "Twitter", url: "https://twitter.com/alexjohnson", icon: <Twitter className="h-5 w-5" /> },
-    { name: "GitHub", url: "https://github.com/alexjohnson", icon: <Github className="h-5 w-5" /> },
-    { name: "LinkedIn", url: "https://linkedin.com/in/alexjohnson", icon: <Linkedin className="h-5 w-5" /> },
-    { name: "Instagram", url: "https://instagram.com/alexjohnson", icon: <Instagram className="h-5 w-5" /> },
+    { name: "Twitter", url: "https://www.linkedin.com/in/neil-toscano-fernandez-2b106a20b/", icon: <Twitter className="h-5 w-5" /> },
+    { name: "GitHub", url: "https://www.linkedin.com/in/neil-toscano-fernandez-2b106a20b/", icon: <Github className="h-5 w-5" /> },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/neil-toscano-fernandez-2b106a20b/", icon: <Linkedin className="h-5 w-5" /> },
+    { name: "Instagram", url: "https://www.linkedin.com/in/neil-toscano-fernandez-2b106a20b/", icon: <Instagram className="h-5 w-5" /> },
   ]
 
   const portfolioImages = [
