@@ -45,72 +45,40 @@ export default function Component() {
   ]
 
   return (
-    <div className={`min-h-screen p-8 transition-colors duration-300 ${
-      theme === 'light' 
-        ? 'bg-gradient-to-r from-purple-300 via-blue-300 to-teal-300' 
-        : 'bg-gray-900'
-    }`}>
-      <Card className={`max-w-4xl mx-auto overflow-hidden ${
-        theme === 'light' 
-          ? 'bg-white/10 backdrop-blur-md shadow-lg' 
-          : 'bg-gray-800 border-gray-700'
-      }`}>
+    <div className="min-h-screen p-8 transition-colors duration-300 bg-gradient-to-r from-purple-300 via-blue-300 to-teal-300 dark:bg-[#0c1220]">
+      <Card className="max-w-4xl mx-auto overflow-hidden bg-white/10 dark:bg-[#0c1220] backdrop-blur-md shadow-lg dark:border-[#00FFFF] dark:border">
         <CardContent className="p-8">
           <div className="flex justify-end mb-4">
             <Button
               variant="outline"
               size="icon"
               onClick={toggleTheme}
-              className={`${
-                theme === 'light'
-                  ? 'bg-white/20 text-gray-800 hover:bg-white/30 border-gray-400'
-                  : 'bg-gray-700 text-gray-200 hover:bg-gray-600 border-gray-600'
-              }`}
+              className="bg-white/20 dark:bg-[#0c1220] text-gray-800 dark:text-[#00FFFF] hover:bg-white/30 dark:hover:bg-[#1a2332] border-[#00FFFF]"
             >
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               <span className="sr-only">Toggle theme</span>
             </Button>
           </div>
           <div className="flex flex-col items-center mb-8">
-            <Avatar className={`w-32 h-32 mb-4 border-4 ${
-              theme === 'light' ? 'border-white/50' : 'border-gray-600'
-            }`}>
+            <Avatar className="w-32 h-32 mb-4 border-4 border-white/50 dark:border-[#00FFFF]">
               <AvatarImage src={personalInfo.avatar} alt={personalInfo.name} />
               <AvatarFallback>{personalInfo.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
             </Avatar>
-            <h1 className={`text-3xl font-bold mb-2 ${
-              theme === 'light' ? 'text-gray-800' : 'text-gray-100'
-            }`}>{personalInfo.name}</h1>
-            <p className={`text-xl ${
-              theme === 'light' ? 'text-gray-700' : 'text-gray-300'
-            }`}>{personalInfo.title}</p>
+            <h1 className="text-3xl font-bold text-gray-800 dark:text-[#00FFFF] mb-2">{personalInfo.name}</h1>
+            <p className="text-xl text-gray-700 dark:text-[#00FFFF]/80">{personalInfo.title}</p>
           </div>
 
-          <Card className={`mb-8 ${
-            theme === 'light' 
-              ? 'bg-white/20 backdrop-blur-md' 
-              : 'bg-gray-700 border-gray-600'
-          }`}>
+          <Card className="bg-white/20 dark:bg-[#0c1220] backdrop-blur-md mb-8 dark:border-[#00FFFF] dark:border">
             <CardContent className="p-6">
-              <h2 className={`text-2xl font-semibold mb-4 ${
-                theme === 'light' ? 'text-gray-800' : 'text-gray-100'
-              }`}>Quién soy</h2>
-              <p className={theme === 'light' ? 'text-gray-700' : 'text-gray-300'}>{personalInfo.bio}</p>
+              <h2 className="text-2xl font-semibold text-gray-800 dark:text-[#00FFFF] mb-4">Quién soy</h2>
+              <p className="text-gray-700 dark:text-white">{personalInfo.bio}</p>
             </CardContent>
           </Card>
 
-          <Card className={`mb-8 ${
-            theme === 'light' 
-              ? 'bg-white/20 backdrop-blur-md' 
-              : 'bg-gray-700 border-gray-600'
-          }`}>
+          <Card className="bg-white/20 dark:bg-[#0c1220] backdrop-blur-md mb-8 dark:border-[#00FFFF] dark:border">
             <CardContent className="p-6">
-              <h2 className={`text-2xl font-semibold mb-4 ${
-                theme === 'light' ? 'text-gray-800' : 'text-gray-100'
-              }`}>Qué hago</h2>
-              <ul className={`list-disc list-inside ${
-                theme === 'light' ? 'text-gray-700' : 'text-gray-300'
-              }`}>
+              <h2 className="text-2xl font-semibold text-gray-800 dark:text-[#00FFFF] mb-4">Qué hago</h2>
+              <ul className="list-disc list-inside text-gray-700 dark:text-white">
                 <li>Diseño de interfaces de usuario intuitivas y atractivas</li>
                 <li>Desarrollo de aplicaciones web responsivas y de alto rendimiento</li>
                 <li>Creación de experiencias de usuario memorables y accesibles</li>
@@ -121,17 +89,7 @@ export default function Component() {
 
           <div className="flex justify-center space-x-4 mb-8">
             {socialLinks.map((link) => (
-              <Button 
-                key={link.name} 
-                variant="outline" 
-                size="icon" 
-                className={`${
-                  theme === 'light'
-                    ? 'bg-white/20 hover:bg-white/30 text-gray-800 border-gray-400'
-                    : 'bg-gray-700 hover:bg-gray-600 text-gray-200 border-gray-600'
-                }`} 
-                asChild
-              >
+              <Button key={link.name} variant="outline" size="icon" className="bg-white/20 dark:bg-[#0c1220] hover:bg-white/30 dark:hover:bg-[#1a2332] text-gray-800 dark:text-[#00FFFF] border-gray-400 dark:border-[#00FFFF]" asChild>
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
                   {link.icon}
                   <span className="sr-only">{link.name}</span>
@@ -142,12 +100,7 @@ export default function Component() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {portfolioImages.map((image, index) => (
-              <div 
-                key={index} 
-                className={`relative aspect-video overflow-hidden rounded-lg border ${
-                  theme === 'light' ? 'border-gray-400' : 'border-gray-600'
-                }`}
-              >
+              <div key={index} className="relative aspect-video overflow-hidden rounded-lg border border-gray-400 dark:border-[#00FFFF]">
                 <Image
                   src={image.src}
                   alt={image.alt}
