@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Twitter, Linkedin, Instagram, Moon, Sun, Youtube } from 'lucide-react'
+import { Moon, Sun, Youtube } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Component() {
