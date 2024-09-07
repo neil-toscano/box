@@ -38,8 +38,8 @@ export default function Component() {
   ]
 
   const portfolioImages = [
-    { src: "https://nextui-docs-v2.vercel.app/images/album-cover.png?height=400&width=600", alt: "Proyecto 1" },
-    { src: "https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg?height=400&width=600", alt: "Proyecto 2" },
+    { src: "https://nextui.org/images/album-cover.png", alt: "Proyecto 1" },
+    { src: "https://nextui.org/images/hero-card-complete.jpeg", alt: "Proyecto 2" },
     { src: "https://nextui.org/images/card-example-6.jpeg", alt: "Proyecto 3" },
     { src: "https://nextui.org/images/card-example-2.jpeg", alt: "Proyecto 4" },
   ]
