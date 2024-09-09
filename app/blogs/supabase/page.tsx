@@ -44,12 +44,12 @@ export default function Component() {
   ]
 
   return (
-    <div className={`min-h-screen p-8 transition-colors duration-300 ${
+    <div className={`min-h-screen p-0 sm:p-8 transition-colors duration-300 ${
       theme === 'light' 
-        ? 'bg-gradient-to-r from-[#5A3F37] to-[#2C7744] ' 
+        ? 'bg-gradient-to-r from-[#5A3F37] to-[#2C7744]' 
         : 'bg-gray-800 md:bg-gray-900 sm:bg-gray-800'
     }`}>
-      <Card className={`max-w-4xl mx-auto overflow-hidden ${
+      <Card className={`max-w-4xl mx-auto sm:w-full overflow-hidden  ${
         theme === 'light' 
           ? 'bg-white/10 md:bg-white/10 md:backdrop-blur-md md:shadow-lg' 
           : 'bg-gray-800 md:bg-gray-800'
