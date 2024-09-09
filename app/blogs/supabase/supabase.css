@@ -1,60 +1,72 @@
 .card {
-    width: 100%;
-    margin: 0 auto;
-    background: rgba(100, 151, 147);
-    padding: 2em;
-    position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(100, 151, 147);
+  padding: 2em;
+  position: relative;
 }
 
 .bio-content {
-    background: rgba(100, 151, 147);
+  background: rgba(100, 151, 147);
 }
 
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
-.card::after, .card::before {
-    --angle: 0deg ;
-    content: '';
-    position: absolute;
-    height: calc(100% + 10px); /* Reduce el tamaño total */
-    width: calc(100% + 10px); /* Reduce el tamaño total */
-    background-image: conic-gradient(from var(--angle) at center ,transparent 70%,#c6ffdd, #fbd786, #f7797d);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 5px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
+.card::after,
+.card::before {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  height: calc(100% + 10px); /* Reduce el tamaño total */
+  width: calc(100% + 10px); /* Reduce el tamaño total */
+  background-image: conic-gradient(
+    from var(--angle) at center,
+    transparent 70%,
+    #c6ffdd,
+    #fbd786,
+    #f7797d
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
 }
-.bio-content::after, .bio-content::before {
-    content: '';
-    position: absolute;
-    height: calc(100% + 10px); /* Reduce el tamaño total */
-    width: calc(100% + 10px); /* Reduce el tamaño total */
-    background-image: conic-gradient(from 0deg at center,#b8ddc7, #fbd786, #f1afb2);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 10px;
-    border-radius: 10px;
+.bio-content::after,
+.bio-content::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 10px); /* Reduce el tamaño total */
+  width: calc(100% + 10px); /* Reduce el tamaño total */
+  background-image: conic-gradient(
+    from 0deg at center,
+    #b8ddc7,
+    #fbd786,
+    #f1afb2
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 10px;
+  border-radius: 10px;
 }
-
-.card::before, .bio-content::before {
-    filter: blur(1.5rem);
-    opacity: 0.5;
+.card::before,
+.bio-content::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
-
 
 @keyframes spin {
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 360deg;
-    }
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
