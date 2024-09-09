@@ -1,9 +1,13 @@
 .card {
-    width: 100%px;
+    width: 100%;
     margin: 0 auto;
     background: rgba(100, 151, 147);
     padding: 2em;
     position: relative;
+}
+
+.bio-content {
+    background: rgba(100, 151, 147);
 }
 
 @property --angle{
@@ -22,13 +26,26 @@
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     animation: 3s spin linear infinite;
 }
+.bio-content::after, .bio-content::before {
+    content: '';
+    position: absolute;
+    height: calc(100% + 10px); /* Reduce el tamaño total */
+    width: calc(100% + 10px); /* Reduce el tamaño total */
+    background-image: conic-gradient(from 0deg at center,#b8ddc7, #fbd786, #f1afb2);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 10px;
+}
 
-.card::before {
-    /* filter: blur(1.5rem); */
+.card::before, .bio-content::before {
+    filter: blur(1.5rem);
     opacity: 0.5;
 }
 

@@ -27,9 +27,9 @@ export default function Component() {
 
   const personalInfo = {
     name: "¿Qué es Supabase?",
-    title: "Explorando el mundo de los contratos inteligentes",
+    title: "Backend listo para usar.",
     avatar: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png",
-    bio: "Solidity es el lenguaje que impulsa los contratos inteligentes en Ethereum, permitiendo crear aplicaciones descentralizadas sin intermediarios. Piensa en él como un código legal inmutable, donde las reglas se ejecutan automáticamente en la blockchain, ofreciendo transparencia y seguridad sin precedentes.",
+    bio: "Supabase es una plataforma de desarrollo backend que ofrece una alternativa de código abierto a Firebase. Proporciona una base de datos Postgres con capacidades de almacenamiento, autenticación, y funciones en tiempo real, permitiendo a los desarrolladores construir aplicaciones rápidamente sin necesidad de configurar un backend completo.",
   }
 
   const socialLinks = [
@@ -46,7 +46,7 @@ export default function Component() {
   return (
     <div className={`min-h-screen p-8 transition-colors duration-300 ${
       theme === 'light' 
-        ? 'bg-gradient-to-r from-purple-300 via-blue-300 to-teal-300' 
+        ? 'bg-gradient-to-r from-[#5A3F37] to-[#2C7744] ' 
         : 'md:bg-gray-900 sm:bg-gray-800'
     }`}>
       <Card className={`max-w-4xl mx-auto overflow-hidden ${
@@ -84,15 +84,15 @@ export default function Component() {
               <AvatarFallback>{personalInfo.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
             </Avatar>
             <h1 className={`text-3xl font-bold mb-2 ${
-              theme === 'light' ? 'text-gray-800' : 'text-gray-100'
+              theme === 'light' ? 'text-gray-100' : 'text-gray-100'
             }`}>{personalInfo.name}</h1>
             <p className={`text-xl ${
-              theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+              theme === 'light' ? 'text-gray-300' : 'text-gray-300'
             }`}>{personalInfo.title}</p>
           </div>
           <div className="flex justify-center space-x-4 mb-8">
           <p className={`text-xl ${
-              theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+              theme === 'light' ? 'text-gray-300' : 'text-gray-300'
             }`}>Míralo en</p>
             {socialLinks.map((link) => (
               <Button 
@@ -117,30 +117,34 @@ export default function Component() {
           <Card className={`mb-8 ${
             theme === 'light' 
               ? 'bg-white/20 backdrop-blur-md' 
-              : 'bg-gray-700 border-gray-600'
+              : 'bg-gray-700 border-gray-600 backdrop-blur-md'
           }`}>
-            <CardContent className="p-6">
+            <CardContent className={`p-6 bio-content rounded-sm ${
+                theme === 'light' ? '' : '!bg-gray-700'
+              }`}>
               <h2 className={`text-2xl font-semibold mb-4 ${
-                theme === 'light' ? 'text-gray-800' : 'text-gray-100'
+                theme === 'light' ? 'text-gray-100' : 'text-gray-100'
               }`}>¿Qué es?</h2>
-              <p className={theme === 'light' ? 'text-gray-700' : 'text-gray-300'}>{personalInfo.bio}</p>
+              <p className={theme === 'light' ? 'text-gray-50' : 'text-gray-300'}>{personalInfo.bio}</p>
             </CardContent>
           </Card>
           <Card className={`mb-8 ${
             theme === 'light' 
               ? 'bg-white/20 backdrop-blur-md' 
-              : 'bg-gray-700 border-gray-600'
+              : 'bg-gray-700 border-gray-600 backdrop-blur-md'
           } `}>
-            <CardContent className="p-6 rounded-xl card">
+            <CardContent className={`p-6 rounded-xl card ${
+                theme === 'light' ? '' : '!bg-gray-700'
+              }`}>
               <h2 className={`text-2xl font-semibold mb-4 ${
-                theme === 'light' ? 'text-gray-800' : 'text-gray-100'
+                theme === 'light' ? 'text-gray-100' : 'text-gray-100'
               }`}>Empresas que lo usan</h2>
               <ul className={`list-disc list-inside ${
-                theme === 'light' ? 'text-gray-700' : 'text-gray-300'
+                theme === 'light' ? 'text-gray-100' : 'text-gray-300'
               }`}>
-               <li><strong>Uniswap</strong>: Utiliza Solidity para crear un intercambio descentralizado que permite el comercio de tokens sin intermediarios.</li>
-               <li><strong>Chainlink</strong>: Emplea Solidity para conectar contratos inteligentes con datos del mundo real a través de oráculos descentralizados.</li>
-               <li><strong>Decentraland</strong>: Usa Solidity para gestionar propiedades digitales en un metaverso descentralizado donde los usuarios compran y construyen terrenos virtuales.</li>
+               <li><strong>Mimica </strong>: Una empresa que utiliza inteligencia artificial para automatizar procesos empresariales.</li>
+               <li><strong>Hoppscotch</strong>: Una plataforma de API que facilita el desarrollo y la prueba de API.</li>
+               <li><strong>Splitbee </strong>: Una herramienta de análisis y automatización para aplicaciones web y sitios</li>
               </ul>
             </CardContent>
           </Card>
