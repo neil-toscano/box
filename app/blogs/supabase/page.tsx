@@ -56,7 +56,7 @@ export default function Component() {
       }
       ${
       theme === 'light' 
-        ? 'sm:bg-white sm:backdrop-blur-sm sm:shadow-md border-none' 
+        ? 'sm:backdrop-blur-sm sm:shadow-md border-none' 
         : 'sm:bg-gray-800 sm:border-transparent'
       }
       `}>
