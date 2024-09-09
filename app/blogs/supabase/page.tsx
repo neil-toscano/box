@@ -47,16 +47,16 @@ export default function Component() {
     <div className={`min-h-screen p-8 transition-colors duration-300 ${
       theme === 'light' 
         ? 'bg-gradient-to-r from-[#5A3F37] to-[#2C7744] ' 
-        : 'md:bg-gray-900 sm:bg-gray-800'
+        : 'bg-gray-800 md:bg-gray-900 sm:bg-gray-800'
     }`}>
       <Card className={`max-w-4xl mx-auto overflow-hidden ${
         theme === 'light' 
-          ? 'md:bg-white/10 md:backdrop-blur-md md:shadow-lg' 
-          : 'md:bg-gray-800 md:border-gray-700'
+          ? 'bg-white/10 md:bg-white/10 md:backdrop-blur-md md:shadow-lg' 
+          : 'bg-gray-800 md:bg-gray-800'
       }
       ${
       theme === 'light' 
-        ? 'sm:bg-white sm:backdrop-blur-sm sm:shadow-md' 
+        ? 'sm:bg-white sm:backdrop-blur-sm sm:shadow-md border-none' 
         : 'sm:bg-gray-800 sm:border-transparent'
       }
       `}>
